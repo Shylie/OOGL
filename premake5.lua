@@ -1,19 +1,3 @@
-workspace "OOGL"
-	configurations { "Debug", "Release" }
-
-	location "build"
-
-	filter "configurations:Debug"
-		symbols "On"
-		optimize "Off"
-		defines "DEBUG"
-
-	filter "configurations:Release"
-		symbols "Off"
-		optimize "Full"
-
-	filter {}
-
 project "OOGL"
 	location "%{wks.location}/%{prj.name}"
 	targetdir "%{wks.location}/bin/%{prj.name}/%{cfg.buildcfg}"
